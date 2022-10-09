@@ -1,0 +1,55 @@
+﻿@page "/addMarks"
+@layout MainLayout
+@inherits SchoolPrimaProject.Pages.AddMarksPageComponent
+
+
+@using Radzen
+@using Radzen.Blazor
+@using SchoolPrimaProject.Model
+
+@if (Schools == null)
+{
+    <p><em>Loading...</em></p>
+}else{
+
+    <div class="col-xl-3 mb-3">
+        <h5>School</h5>
+            <RadzenDropDown FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Style="width:auto" TValue="int" @bind-Value="SelectedSchool" Placeholder="Select School" AllowFiltering="true" Data="@(Schools)" TextProperty="School_Name" ValueProperty="School_Id" />
+    </div>
+    @if (SelectedSchool > 0)
+    {
+        <div class="col-xl-3 mb-3">
+            <h5>Student</h5>
+                <RadzenDropDown FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Style="width:auto" TValue="int" @bind-Value="SelectedStudent" Placeholder="Select Student" AllowFiltering="true" Data="@(Student)" TextProperty="Student_Name" ValueProperty="Student_id" />
+        </div>
+
+    }
+        @if (SelectedStudent > 0)
+        {
+            <div class="col-xl-3 mb-3">
+                <h5>Subject</h5>
+                <RadzenDropDown FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Style="width:auto" TValue="int" @bind-Value="SelecedSubject" Placeholder="Select Subject" AllowFiltering="true" Data="@(Subject)" TextProperty="Subject_Name" ValueProperty="Subject_id" />
+            </div>
+
+        }
+
+        @if (SelecedSubject > 0)
+        {
+            <div class="col-xl-3 mb-3">
+                <RadzenCard>
+                    <RadzenText TextStyle="TextStyle.Subtitle2" TagName="TagName.H3">Mark Value</RadzenText>
+                    <RadzenNumeric TValue="double" @bind-Value=@marks />
+                </RadzenCard>
+            </div>
+
+        }
+        
+            <RadzenButton  Click="@(args => Submit())" ButtonStyle="ButtonStyle.Secondary">
+                <RadzenIcon  />  Submit
+            </RadzenButton>
+     
+        
+
+
+}
+

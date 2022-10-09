@@ -1,0 +1,71 @@
+﻿@inherits SchoolPrimaProject.Layouts.MainLayoutComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SchoolPrimaProject.Pages
+<RadzenDialog />
+<RadzenNotification />
+<RadzenTooltip />
+<RadzenContextMenu />
+
+<RadzenLayout>
+    <ChildContent>
+        <RadzenHeader>
+            <ChildContent>
+                <div class="row justify-content-start align-items-center">
+                    <div class="col-12 d-flex align-items-center">
+                        <RadzenSidebarToggle Icon="view_day" Click="@SidebarToggle0Click">
+                        </RadzenSidebarToggle>
+                        <RadzenImage Path="image/1456490540.jpg" Style=" min-width:50px;max-width:60px" />
+                        <RadzenLabel Text="School Prima" >
+                        </RadzenLabel>
+
+                        <RadzenCard Class="mt-5 mx-auto text-right" Style=" padding: 0px !important; margin-left: auto !important;margin-right: 0px !important;margin-top: 0px !important;">
+                            <RadzenProfileMenu>
+                                <Template>
+                                    <RadzenLabel Text="Admin"> </RadzenLabel>
+
+                                    <RadzenGravatar Email="fmsujath@gmail.com">
+                                    </RadzenGravatar>
+                                </Template>
+                                <ChildContent>                                
+                                    <RadzenProfileMenuItem Text="LogOut" Path="login" ></RadzenProfileMenuItem>
+                                </ChildContent>
+                            </RadzenProfileMenu>
+                        </RadzenCard>
+
+                    </div>
+
+                </div>
+            </ChildContent>
+        </RadzenHeader>
+        <RadzenBody @ref="body0">
+            <ChildContent>
+                <RadzenContentContainer Name="main">
+                    @Body
+                </RadzenContentContainer>
+            </ChildContent>
+        </RadzenBody>
+        <RadzenSidebar @ref="sidebar0">
+            <ChildContent>
+                <RadzenPanelMenu style="height: 100%">
+                    <ChildContent>
+                        <RadzenPanelMenuItem Text="Studen Board" Path="dashboard">            </RadzenPanelMenuItem>
+                    </ChildContent>
+
+                </RadzenPanelMenu>
+            </ChildContent>
+        </RadzenSidebar>
+        <RadzenFooter Style="padding: 0rem;">
+
+            @*    <RadzenImage Path="assets/image/NRWManager.png"  Style="height:60%;width:80%">
+
+            </RadzenImage>*@
+            @*Software Support : Aslal Sujath : fmsujath@gmail.com*@
+            <RadzenLabel Text="Prima, Copyright Ⓒ 2022 ">
+
+            </RadzenLabel>
+
+        </RadzenFooter>
+    </ChildContent>
+</RadzenLayout>

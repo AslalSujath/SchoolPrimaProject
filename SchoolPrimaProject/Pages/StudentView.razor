@@ -1,0 +1,84 @@
+﻿
+@page "/dashboard"
+@layout MainLayout
+@inherits SchoolPrimaProject.Pages.StudentViewPageComponent
+
+@using Radzen
+@using Radzen.Blazor
+@using SchoolPrimaProject.Model
+@using SchoolPrimaProject.VM
+
+
+<RadzenButton Click="@(args => Navig())" ButtonStyle="ButtonStyle.Secondary">
+    <RadzenIcon />  Add Marks
+</RadzenButton>
+@if (Schools == null)
+{
+    <p><em>Loading...</em></p>
+}else{
+<div class="row">
+    <div class="col-xl-3 mb-3">
+        <h5>School</h5>
+            <RadzenDropDown FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Style="width:auto" TValue="int" @bind-Value="SelectedSchool" Placeholder="Select School" AllowFiltering="true" Data="@(Schools)" TextProperty="School_Name" ValueProperty="School_Id" />
+    </div>
+        <RadzenButton Click="@(args => ResetFilter())" ButtonStyle="ButtonStyle.Secondary">
+            <RadzenIcon Icon="cached" />  Reset
+        </RadzenButton>
+   @* @if (SelectedSchool > 0)
+    {
+        <div class="col-xl-3 mb-3">
+            <h5>Student</h5>
+                <RadzenDropDown FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Style="width:auto" TValue="int" @bind-Value="SelectedStudent" Placeholder="Select Student" AllowFiltering="true" Data="@(Student)" TextProperty="Student_Name" ValueProperty="Student_id" />
+        </div>
+
+    }*@
+        <div class="row">
+
+            <div class="col-md-6">
+                <RadzenDataGrid ColumnWidth="200px" AllowFiltering="true" AllowPaging="true" PageSize="15" AllowSorting="true"
+                            FilterCaseSensitivity="FilterCaseSensitivity.CaseInsensitive" Data="@Student" TItem="Studen" @bind-Value="@SelectedStuden">
+                    <Columns>
+                        <RadzenDataGridColumn TItem="Studen" Property="Student_id" Title="Student_id" Width="80px" />
+                        <RadzenDataGridColumn TItem="Studen" Property="Student_Name" Title="Student_Name" Width="120px" />
+                        <RadzenDataGridColumn TItem="Studen" Property="Student_Dob" Title="Student_Dob" Width="120px" />
+                        <RadzenDataGridColumn TItem="Studen" Property="Student_Grade" Title="Student_Grade" Width="80px" />
+                    </Columns>
+                </RadzenDataGrid>
+            </div>
+
+
+            <div class="col-md-6">
+                @if (SelectedStuden != null)
+                {
+                    <RadzenCard Style="margin-bottom:20px">
+                        Student:
+                        <b>@SelectedStuden.FirstOrDefault()?.Student_Name</b>
+                    </RadzenCard>
+                    <RadzenTabs>
+                        <Tabs>
+                            <RadzenTabsItem Text="Marks Details">
+                                @foreach (var item in MarksVM)
+                        {
+                                    <div class="card">
+                                       <h4> Subject : </h4>
+                                       <label>@item.Subject</label> <br>
+                                        <h4> Marks : </h4>
+                                        <label>@item.Marks</label>
+                                    </div>
+                                }   
+                          
+                            </RadzenTabsItem>
+                        </Tabs>
+                    </RadzenTabs>
+                }
+              
+            </div>
+
+        </div>
+
+
+</div>
+
+
+}
+

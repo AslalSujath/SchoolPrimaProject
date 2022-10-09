@@ -1,0 +1,23 @@
+﻿@page "/"
+@page "/login"
+@inherits SchoolPrimaProject.Pages.LoginComponent
+
+<div class="flex-md-row">
+
+    <div class="row">
+       
+                <RadzenCard class="form" Style="width: 100%;">
+                    <RadzenTemplateForm Data=@("SimpleLogin")>
+                        <RadzenLogin AllowRegister="false" AllowResetPassword="false" Login=@(args => OnLogin(args, "login")) />
+                    </RadzenTemplateForm>
+                </RadzenCard>
+      
+    </div>
+
+</div>
+
+
+
+
+
+
