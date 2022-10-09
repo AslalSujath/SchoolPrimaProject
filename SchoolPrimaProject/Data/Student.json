@@ -1,0 +1,44 @@
+[
+  {
+    "Student_id": 1,
+    "Student_Name": "A",
+    "Student_Dob": "1990-02-13T00:00:00",
+    "Student_Grade": 10,
+    "School_Id": 1
+  },
+  {
+    "Student_id": 2,
+    "Student_Name": "B",
+    "Student_Dob": "1994-05-16T00:00:00",
+    "Student_Grade": 9,
+    "School_Id": 1
+  },
+  {
+    "Student_id": 3,
+    "Student_Name": "C",
+    "Student_Dob": "1997-08-12T00:00:00",
+    "Student_Grade": 11,
+    "School_Id": 1
+  },
+  {
+    "Student_id": 4,
+    "Student_Name": "D",
+    "Student_Dob": "1989-01-05T00:00:00",
+    "Student_Grade": 8,
+    "School_Id": 2
+  },
+  {
+    "Student_id": 5,
+    "Student_Name": "E",
+    "Student_Dob": "1992-04-30T00:00:00",
+    "Student_Grade": 11,
+    "School_Id": 2
+  },
+  {
+    "Student_id": 6,
+    "Student_Name": "F",
+    "Student_Dob": "1994-08-12T00:00:00",
+    "Student_Grade": 12,
+    "School_Id": 2
+  }
+]

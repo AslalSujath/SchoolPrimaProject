@@ -1,0 +1,38 @@
+[
+  {
+    "Teacher_id": 2,
+    "Teacher_Name": "Jayamini",
+    "School_Id": 1,
+    "Subject_id": 1
+  },
+  {
+    "Teacher_id": 3,
+    "Teacher_Name": "Lakmi",
+    "School_Id": 1,
+    "Subject_id": 2
+  },
+  {
+    "Teacher_id": 4,
+    "Teacher_Name": "Perera",
+    "School_Id": 1,
+    "Subject_id": 3
+  },
+  {
+    "Teacher_id": 5,
+    "Teacher_Name": "Kusal",
+    "School_Id": 2,
+    "Subject_id": 2
+  },
+  {
+    "Teacher_id": 6,
+    "Teacher_Name": "Nirmani",
+    "School_Id": 2,
+    "Subject_id": 3
+  },
+  {
+    "Teacher_id": 7,
+    "Teacher_Name": "Jeewa",
+    "School_Id": 2,
+    "Subject_id": 1
+  }
+]

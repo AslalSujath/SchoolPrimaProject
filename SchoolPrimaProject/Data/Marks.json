@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "Marks_Value": 60.0,
+    "Student_Id": 1,
+    "Subject_id": 1
+  },
+  {
+    "id": 2,
+    "Marks_Value": 70.0,
+    "Student_Id": 1,
+    "Subject_id": 2
+  },
+  {
+    "id": 4,
+    "Marks_Value": 90.0,
+    "Student_Id": 1,
+    "Subject_id": 3
+  },
+  {
+    "id": 5,
+    "Marks_Value": 60.0,
+    "Student_Id": 2,
+    "Subject_id": 3
+  },
+  {
+    "id": 6,
+    "Marks_Value": 75.0,
+    "Student_Id": 3,
+    "Subject_id": 2
+  },
+  {
+    "id": 7,
+    "Marks_Value": 85.0,
+    "Student_Id": 4,
+    "Subject_id": 2
+  },
+  {
+    "id": 8,
+    "Marks_Value": 88.0,
+    "Student_Id": 4,
+    "Subject_id": 3
+  },
+  {
+    "id": 9,
+    "Marks_Value": 78.0,
+    "Student_Id": 5,
+    "Subject_id": 1
+  },
+  {
+    "id": 10,
+    "Marks_Value": 82.0,
+    "Student_Id": 5,
+    "Subject_id": 2
+  },
+  {
+    "id": 11,
+    "Marks_Value": 75.0,
+    "Student_Id": 5,
+    "Subject_id": 3
+  },
+  {
+    "id": 12,
+    "Marks_Value": 45.0,
+    "Student_Id": 6,
+    "Subject_id": 1
+  },
+  {
+    "id": 13,
+    "Marks_Value": 64.0,
+    "Student_Id": 6,
+    "Subject_id": 2
+  },
+  {
+    "id": 1002,
+    "Marks_Value": 60.0,
+    "Student_Id": 6,
+    "Subject_id": 2
+  },
+  {
+    "id": 1003,
+    "Marks_Value": 30.0,
+    "Student_Id": 5,
+    "Subject_id": 3
+  },
+  {
+    "id": 2002,
+    "Marks_Value": 50.0,
+    "Student_Id": 5,
+    "Subject_id": 2
+  },
+  {
+    "id": 2003,
+    "Marks_Value": 0.0,
+    "Student_Id": -1,
+    "Subject_id": -1
+  }
+]
