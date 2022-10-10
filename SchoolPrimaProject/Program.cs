@@ -42,7 +42,6 @@ builder.Services.AddScoped<HttpClient>(serviceProvider =>
 builder.Services.AddHttpClient();
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-builder.Services.AddTransient<DataSeeder>();
 builder.Services.AddSingleton<WeatherForecastService>();
 builder.Services.AddScoped<DialogService>();
 builder.Services.AddScoped<NotificationService>();
@@ -53,20 +52,7 @@ builder.Services.AddScoped<ContextMenuService>();
 
 //builder.Services.AddScoped<ExportService>();
 var app = builder.Build();
-if (args.Length == 1 && args[0].ToLower() == "seeddata")
-    SeedData(app);
 
-//Seed Data
-void SeedData(IHost app)
-{
-    var scopedFactory = app.Services.GetService<IServiceScopeFactory>();
-
-    using (var scope = scopedFactory.CreateScope())
-    {
-        var service = scope.ServiceProvider.GetService<DataSeeder>();
-        service.Seed();
-    }
-}
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
@@ -89,5 +75,5 @@ app.UseEndpoints(endpoints =>
     //endpoints.MapHub<NotificationHub>("/notificationhub");
     endpoints.MapFallbackToPage("/_Host");
 });
-
+app.MigrateDatabase();
 app.Run();

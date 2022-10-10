@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolPrimaProject.Model;
 
@@ -11,9 +12,11 @@ using SchoolPrimaProject.Model;
 namespace SchoolPrimaProject.Migrations
 {
     [DbContext(typeof(SchoolDbContext))]
-    partial class SchoolDbContextModelSnapshot : ModelSnapshot
+    [Migration("20221010092526_sample")]
+    partial class sample
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -120,23 +123,6 @@ namespace SchoolPrimaProject.Migrations
                     b.HasKey("Subject_id");
 
                     b.ToTable("Subjects");
-
-                    b.HasData(
-                        new
-                        {
-                            Subjectid = 1,
-                            SubjectName = "Art"
-                        },
-                        new
-                        {
-                            Subjectid = 2,
-                            SubjectName = "Sinhala"
-                        },
-                        new
-                        {
-                            Subjectid = 3,
-                            SubjectName = "Maths"
-                        });
                 });
 
             modelBuilder.Entity("SchoolPrimaProject.Model.Teacher", b =>
