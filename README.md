@@ -12,9 +12,9 @@ Create DAtabase
 	* Created location database name PrimaDBSchool
 then 
   type following code in "Package Manager Console"
->  Enable-migrations 
->  Add-migration initial
->  update-database 
+1.  Enable-migrations 
+2.  Add-migration initial
+3.  update-database 
 
 
  "ConnectionStrings": {
