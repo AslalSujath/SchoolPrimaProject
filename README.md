@@ -9,7 +9,7 @@ password = admin
 
 Create DAtabase 
 
-	* Created location database name PrimaDBSchool
+	* Created local database name PrimaDBSchool
 then 
   type following code in "Package Manager Console"
 1.  Enable-migrations 
